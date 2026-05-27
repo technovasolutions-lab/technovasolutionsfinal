@@ -106,32 +106,29 @@ export default function HeroSection() {
 
   return (
     <>
-      {/* ─────────────────────────────────────────── HERO ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-white text-white dark:bg-[#050816]">
         <div className="relative min-h-[900px] overflow-hidden bg-[#030712] sm:min-h-[920px] lg:min-h-[calc(100vh-88px)] xl:min-h-[820px]">
-          {" "}
-          {/* Background radial + linear gradient */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_45%,rgba(59,130,246,0.22),transparent_34%),radial-gradient(circle_at_78%_55%,rgba(168,85,247,0.18),transparent_35%),linear-gradient(180deg,#030712,#020617)]" />
-          {/* Animated grid */}
+
           <motion.div
             className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-40"
             animate={{ backgroundPosition: ["0px 0px", "64px 64px"] }}
             transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
           />
-          {/* Main grid */}
-          <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-4 pb-32 pt-14 sm:gap-14 sm:px-5 sm:pb-36 sm:pt-16 lg:grid-cols-[0.78fr_1.22fr] lg:gap-10 lg:px-8 lg:pb-28 lg:pt-16 xl:pb-24">
-            {/* ── LEFT: TEXT CONTENT ── */}
+
+          <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 pb-24 pt-10 sm:gap-14 sm:px-5 sm:pb-32 sm:pt-16 lg:grid-cols-[0.78fr_1.22fr] lg:gap-10 lg:px-8 lg:pb-28 lg:pt-16 xl:pb-24">
+            {/* TEXT CONTENT */}
             <motion.div
               initial={{ opacity: 0, y: 45 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center lg:text-left"
+              className="order-2 text-center lg:order-1 lg:text-left"
             >
               <motion.h1
                 initial={{ opacity: 0, y: 35, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.15, duration: 0.8, ease: "easeOut" }}
-                className="mx-auto max-w-3xl font-['Poppins'] text-[clamp(2.4rem,7vw,4.2rem)] font-black leading-[1.02] tracking-[-0.04em] text-white lg:mx-0"
+                className="mx-auto max-w-3xl font-['Poppins'] text-[clamp(2.4rem,7vw,4.2rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-white antialiased lg:mx-0"
               >
                 Building
                 <br />
@@ -144,23 +141,13 @@ export default function HeroSection() {
                 </span>
               </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.8 }}
-                className="mx-auto mt-7 max-w-2xl font-['Poppins'] text-base leading-8 text-white/75 sm:text-lg lg:mx-0"
-              >
+              <p className="mx-auto mt-7 max-w-2xl font-['Poppins'] text-base leading-8 text-white/75 sm:text-lg lg:mx-0">
                 We build AI-powered digital products, modern web experiences,
                 and future-ready software solutions that drive real business
                 results.
-              </motion.p>
+              </p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 22 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="mt-9 flex flex-col items-center gap-4 pb-24 sm:flex-row sm:pb-28 lg:items-start lg:pb-20"
-              >
+              <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
                 <Link
                   to="/services"
                   className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 font-['Poppins'] text-sm font-bold text-white shadow-[0_15px_50px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-[1.03]"
@@ -176,36 +163,30 @@ export default function HeroSection() {
                   Apply for Internship
                   <Users className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                 </Link>
-              </motion.div>
+              </div>
             </motion.div>
 
-            {/* ── RIGHT: STATIC 3D TV MOCKUP WITH WELCOME SCREEN ── */}
+            {/* TV SECTION */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 40 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.85, ease: "easeOut" }}
-              className="relative mx-auto flex w-full items-center justify-center overflow-visible"
-              style={{ height: "clamp(260px, 38vw, 460px)" }}
+              className="relative order-1 mx-auto flex w-full max-w-[96vw] items-center justify-center overflow-visible px-1 lg:order-2 lg:max-w-none lg:px-0"
+              style={{ height: "clamp(230px,68vw,460px)" }}
             >
-              {/* Ambient glow behind screen */}
-              <div className="absolute left-1/2 top-1/2 h-[280px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/25 blur-[105px]" />
+              <div className="absolute left-1/2 top-1/2 h-[220px] w-[90%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-[90px] sm:h-[280px] sm:w-[520px]" />
               <div className="absolute bottom-10 left-1/2 h-20 w-[76%] -translate-x-1/2 rounded-full bg-violet-500/25 blur-3xl" />
 
-              {/* 3D perspective wrapper */}
               <div
                 className="relative z-20 w-full max-w-[820px]"
                 style={{ perspective: "1600px" }}
               >
                 <div
-                  className="relative"
-                  style={{
-                    transform: "rotateY(-13deg) rotateX(3deg)",
-                    transformStyle: "preserve-3d",
-                  }}
+                  className="relative lg:[transform:rotateY(-13deg)_rotateX(3deg)]"
+                  style={{ transformStyle: "preserve-3d" }}
                 >
-                  {/* Screen thickness / back side */}
                   <div
-                    className="absolute inset-0 rounded-[12px] bg-gradient-to-br from-slate-700 via-slate-900 to-black"
+                    className="absolute inset-0 hidden rounded-[12px] bg-gradient-to-br from-slate-700 via-slate-900 to-black lg:block"
                     style={{
                       transform: "translate3d(18px, 8px, -34px)",
                       boxShadow:
@@ -213,18 +194,13 @@ export default function HeroSection() {
                     }}
                   />
 
-                  {/* Outer metal frame */}
-                  <div className="relative rounded-[12px] border border-slate-500/80 bg-gradient-to-br from-slate-600 via-slate-950 to-black p-[6px] shadow-[0_35px_120px_rgba(37,99,235,0.35)]">
-                    <div className="rounded-[8px] border border-white/10 bg-black p-[5px]">
-                      {/* Screen */}
-                      <div className="relative overflow-hidden rounded-[5px] border border-white/10 bg-[#020617]">
-                        {/* Screen grid texture */}
+                  <div className="relative rounded-[14px] border border-slate-500/60 bg-gradient-to-br from-slate-600 via-slate-950 to-black p-[5px] shadow-[0_20px_60px_rgba(37,99,235,0.25)] lg:rounded-[12px] lg:p-[6px] lg:shadow-[0_35px_120px_rgba(37,99,235,0.35)]">
+                    <div className="rounded-[10px] border border-white/10 bg-black p-[4px] lg:rounded-[8px] lg:p-[5px]">
+                      <div className="relative overflow-hidden rounded-[8px] border border-white/10 bg-[#020617] lg:rounded-[5px]">
                         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:20px_20px] opacity-35" />
-
-                        {/* Screen radial lights */}
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(34,211,238,0.18),transparent_35%),radial-gradient(circle_at_75%_55%,rgba(168,85,247,0.28),transparent_48%)]" />
 
-                        {/* Moving shine */}
+                        {/* OLD SCAN ANIMATION KEPT */}
                         <motion.div
                           className="absolute inset-y-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent"
                           animate={{ x: ["0%", "330%"] }}
@@ -235,7 +211,7 @@ export default function HeroSection() {
                           }}
                         />
 
-                        <div className="relative min-h-[clamp(210px,27vw,350px)] p-4 sm:p-7">
+                        <div className="relative min-h-[clamp(190px,55vw,320px)] p-3 sm:p-5 lg:min-h-[clamp(210px,27vw,350px)] lg:p-7">
                           <AnimatePresence mode="wait">
                             {showWelcome ? (
                               <motion.div
@@ -244,7 +220,7 @@ export default function HeroSection() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, y: -18, scale: 0.98 }}
                                 transition={{ duration: 0.55, ease: "easeOut" }}
-                                className="flex min-h-[clamp(178px,23vw,294px)] flex-col items-center justify-center text-center"
+                                className="flex min-h-[clamp(160px,48vw,260px)] flex-col items-center justify-center text-center"
                               >
                                 <motion.div
                                   initial={{ scale: 0.86, opacity: 0 }}
@@ -259,7 +235,7 @@ export default function HeroSection() {
                                   initial={{ opacity: 0, y: 12 }}
                                   animate={{ opacity: 1, y: 0 }}
                                   transition={{ delay: 0.35, duration: 0.45 }}
-                                  className="font-['Poppins'] text-[8px] font-black uppercase tracking-[0.42em] text-cyan-200/80 sm:text-[11px]"
+                                  className="font-['Poppins'] text-[8px] font-black uppercase tracking-[0.32em] text-cyan-200/80 sm:text-[11px] sm:tracking-[0.42em]"
                                 >
                                   Initializing AI Systems
                                 </motion.p>
@@ -268,7 +244,7 @@ export default function HeroSection() {
                                   initial={{ opacity: 0, y: 18 }}
                                   animate={{ opacity: 1, y: 0 }}
                                   transition={{ delay: 0.65, duration: 0.5 }}
-                                  className="mt-3 font-['Poppins'] text-[clamp(1.45rem,4vw,3.4rem)] font-black leading-[1.02] text-white"
+                                  className="mt-3 font-['Poppins'] text-[clamp(1.35rem,5vw,3.4rem)] font-black leading-[1.02] text-white"
                                 >
                                   Welcome to
                                   <br />
@@ -303,10 +279,9 @@ export default function HeroSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.5 }}
-                                className="grid min-h-[clamp(178px,23vw,294px)] gap-3 sm:gap-5"
-                                style={{ gridTemplateColumns: "1fr 105px" }}
+                                className="grid min-h-[clamp(160px,48vw,260px)] gap-3 sm:gap-5"
+                                style={{ gridTemplateColumns: "1fr 85px" }}
                               >
-                                {/* Slide content */}
                                 <div className="flex flex-col justify-center">
                                   <AnimatePresence mode="wait">
                                     <motion.div
@@ -325,7 +300,7 @@ export default function HeroSection() {
                                         We Build
                                       </p>
 
-                                      <h2 className="mt-2 font-['Poppins'] text-[clamp(1.45rem,4vw,3.4rem)] font-black leading-[1.02] text-white">
+                                      <h2 className="mt-2 font-['Poppins'] text-[clamp(1.25rem,5vw,3.4rem)] font-black leading-[1.02] text-white">
                                         {tvSlides[activeSlide].title}
                                       </h2>
 
@@ -335,7 +310,6 @@ export default function HeroSection() {
                                     </motion.div>
                                   </AnimatePresence>
 
-                                  {/* Dot indicators */}
                                   <div className="mt-5 flex gap-2 sm:mt-6 sm:gap-3">
                                     {tvSlides.map((_, index) => (
                                       <button
@@ -353,7 +327,6 @@ export default function HeroSection() {
                                   </div>
                                 </div>
 
-                                {/* Feature buttons column */}
                                 <div className="flex flex-col justify-center gap-1.5 sm:gap-3">
                                   {tvFeatures.map((item, index) => {
                                     const Icon = item.icon;
@@ -383,9 +356,8 @@ export default function HeroSection() {
                           </AnimatePresence>
                         </div>
 
-                        {/* TECHNOVA watermark */}
-                        <div className="absolute bottom-[8px] left-1/2 -translate-x-1/2 font-['Poppins'] text-[9px] font-bold tracking-[0.35em] text-white/40 sm:text-[13px]">
-                          TECHNOVA
+                        <div className="absolute bottom-[6px] left-1/2 -translate-x-1/2 font-['Poppins'] text-[7px] font-bold tracking-[0.3em] text-white/40 sm:bottom-[8px] sm:text-[13px] sm:tracking-[0.35em]">
+                          TECHNOVA SOLUTIONS
                         </div>
                       </div>
                     </div>
@@ -394,12 +366,11 @@ export default function HeroSection() {
               </div>
             </motion.div>
           </div>
-          {/* Section curve divider */}
+
           <div className="absolute -bottom-px left-0 h-10 w-full rounded-t-[100%] bg-white dark:bg-[#050816] sm:h-16" />
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────── SERVICES ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-white px-4 py-16 text-slate-900 transition-colors duration-500 dark:bg-[#050816] dark:text-white sm:px-5 sm:py-24">
         <div className="absolute inset-0">
           <div className="absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-blue-500/5 blur-[120px]" />
@@ -408,13 +379,7 @@ export default function HeroSection() {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-0 sm:px-5 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mx-auto max-w-3xl text-center"
-          >
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="mt-7 text-center font-['Poppins'] text-[clamp(1.9rem,8vw,2.25rem)] font-black leading-tight sm:text-5xl">
               <span className="block sm:inline">Specialized</span>
               <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-violet-500 bg-clip-text text-transparent sm:ml-3 sm:inline">
@@ -427,7 +392,7 @@ export default function HeroSection() {
               development services tailored for modern businesses and
               future-ready digital experiences.
             </p>
-          </motion.div>
+          </div>
 
           <div className="mt-16 grid w-full gap-7 lg:mt-20 lg:grid-cols-2">
             {services.map((service, index) => {
@@ -491,13 +456,7 @@ export default function HeroSection() {
             })}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="mt-16 flex justify-center"
-          >
+          <div className="mt-16 flex justify-center">
             <Link
               to="/services"
               className="group inline-flex items-center gap-3 rounded-2xl bg-slate-900 px-8 py-4 font-['Poppins'] text-sm font-bold text-white shadow-2xl shadow-slate-300/30 transition-all duration-300 hover:-translate-y-1 dark:bg-white dark:text-black dark:shadow-white/10"
@@ -508,7 +467,7 @@ export default function HeroSection() {
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
             </Link>
-          </motion.div>
+          </div>
 
           <div className="mt-16 grid w-full gap-6 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4">
             {stats.map((item, index) => (
