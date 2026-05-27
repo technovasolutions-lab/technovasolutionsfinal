@@ -1,268 +1,323 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  BriefcaseBusiness,
   Brush,
   CheckCircle2,
   Code2,
-  GraduationCap,
   Search,
+  ShieldCheck,
   Smartphone,
-  Star,
   WandSparkles,
 } from "lucide-react";
 
 const applyLink =
   "https://docs.google.com/forms/d/e/1FAIpQLScLi9woOfxYBvRM5APpuhthe-ahHqDP6p-iIdjJM6dM4H1vmg/viewform";
 
-const internships = [
+const process = [
+  {
+    step: "01",
+    title: "Application Submission",
+    desc: "Submit your application form. Selected candidates receive an official Internship Offer Letter within 24 hours.",
+  },
+  {
+    step: "02",
+    title: "Task Assignment",
+    desc: "You will receive a practical task/project related to your selected internship domain.",
+  },
+  {
+    step: "03",
+    title: "Mentor Guidance",
+    desc: "Work with mentor guidance, modern tools, and collaborative learning throughout the internship.",
+  },
+  {
+    step: "04",
+    title: "Certificate Process",
+    desc: "After successful completion, interns can receive their certificate with a one-time ₹149 processing fee.",
+  },
+];
+
+const domains = [
   {
     title: "Prompt Engineering",
-    desc: "Learn AI prompts, workflow building, and practical automation for real business use.",
+    desc: "Learn advanced AI prompting, workflow automation, and practical business AI usage.",
     icon: WandSparkles,
   },
   {
     title: "AI-Powered Web Development",
-    desc: "Build responsive websites using React, AI tools, and modern frontend practices.",
+    desc: "Build modern responsive websites using React, AI tools, and production-level UI/UX.",
     icon: Code2,
   },
   {
     title: "AI-Powered App Development",
-    desc: "Create clean mobile app concepts with useful features and smooth user experience.",
+    desc: "Create modern mobile app concepts with smooth experiences and useful features.",
     icon: Smartphone,
   },
   {
-    title: "SEO",
-    desc: "Learn keyword research, content optimization, Google visibility, and ranking basics.",
+    title: "SEO Optimization",
+    desc: "Learn keyword research, optimization, analytics, and ranking strategies.",
     icon: Search,
   },
   {
     title: "Web Design",
-    desc: "Design clean website layouts using UI/UX principles and modern visual structure.",
+    desc: "Master typography, spacing, layouts, color systems, and premium modern design.",
     icon: Brush,
   },
 ];
 
-const benefits = [
-  "Hands-on practical learning",
-  "Mentor guidance",
-  "Certificate after completion",
-  "Portfolio-ready work",
-];
-
-const programDetails = [
-  { label: "Duration", value: "4 Weeks" },
-  { label: "Mode", value: "Online" },
-  { label: "Eligibility", value: "Students & Freshers" },
-  { label: "Internship Fee", value: "₹149 Only" },
+const trustItems = [
+  "MSME Registered",
+  "Verified Business",
+  "Trusted Internship Provider",
+  "Professional Digital Solutions",
 ];
 
 export default function InternshipSection() {
   return (
     <section
       id="internship"
-      className="overflow-hidden bg-[#f3f3f3] px-4 pt-8 pb-14 text-slate-900 dark:bg-[#0f1111] dark:text-white sm:px-6 sm:pt-10 sm:pb-20 lg:px-8 lg:pt-12"
+      className="relative overflow-hidden bg-[#f6f7f8] px-4 py-8 text-[#020617] dark:bg-[#020617] dark:text-white sm:px-6 sm:py-12 lg:px-8"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      {/* Background Effects */}
+      <div className="absolute left-[-140px] top-24 h-72 w-72 rounded-full bg-[#007f8f]/10 blur-3xl" />
+      <div className="absolute right-[-140px] top-96 h-72 w-72 rounded-full bg-[#ffd814]/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl">
         {/* HERO */}
-        <div className="grid w-full items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-10">
-          {" "}
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
+        <div className="mx-auto max-w-5xl text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
+            className="text-xs font-black uppercase tracking-[0.28em] text-[#007f8f]"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#007185] dark:text-[#ffd814] sm:text-sm sm:tracking-[0.25em]">
-              TechNova Internship Program
+            TechNova Internship Program
+          </motion.p>
+
+          <h1
+            className="mt-6 text-[clamp(2rem,9vw,2.5rem)] font-black leading-[1.12] text-[#111827] dark:text-white sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            Start your
+            <span className="block leading-[1.12] text-[#007c89] dark:text-cyan-300">
+              {" "}
+              intership Journey{" "}
             </span>
+          </h1>
 
-            <h1 className="mt-5 max-w-3xl text-[clamp(2rem,8vw,2.5rem)] font-black leading-tight sm:text-5xl lg:text-6xl">
-              Start your career with{" "}
-              <span className="text-[#007185] dark:text-[#ffd814]">
-                real digital skills
-              </span>
-            </h1>
+          <motion.p
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-slate-600 dark:text-white/65 sm:text-base"
+          >
+            Modern internship programs designed for future digital creators.
+          </motion.p>
+        </div>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-white/65 sm:text-lg">
-              Learn practical digital skills through guided tasks, mentor
-              support, project-based practice, and completion certification
-              designed for students, freshers, and beginners.
+        {/* TRUST BANNER */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative mt-12 overflow-hidden rounded-[2rem] border border-cyan-100 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-[#0f1722]"
+        >
+          <div className="absolute left-[-120px] top-[20%] h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="absolute right-[-120px] top-0 h-72 w-72 rounded-full bg-yellow-400/20 blur-3xl" />
+
+          <div className="grid lg:grid-cols-[1fr_390px] xl:grid-cols-[1fr_420px]">
+            {/* LEFT */}
+            <div className="relative overflow-hidden p-6 sm:p-8 lg:p-10 xl:p-12">
+              <div className="absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-cyan-50 to-transparent dark:from-cyan-500/5" />
+
+              <div className="relative flex items-center gap-4">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#007f8f] to-cyan-700 text-white shadow-xl shadow-cyan-500/30">
+                  <ShieldCheck size={30} />
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#007f8f] sm:text-xs">
+                    Trust & Authenticity
+                  </p>
+
+                  <div className="mt-2 h-[3px] w-20 rounded-full bg-gradient-to-r from-[#007f8f] to-transparent" />
+                </div>
+              </div>
+
+              <div className="relative mt-8 max-w-4xl text-center lg:text-left">
+                <h2 className="font-serif text-[clamp(2rem,4vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#020617] dark:text-white">
+                  Officially Recognized <span className="inline-block">&</span>
+                </h2>
+
+                <h2 className="mt-1 font-serif text-[clamp(2rem,4vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em]">
+                  <span className="bg-gradient-to-r from-[#007f8f] via-cyan-500 to-sky-500 bg-clip-text text-transparent">
+                    Udyam Registered
+                  </span>
+                </h2>
+
+                <h2 className="mt-1 font-serif text-[clamp(2rem,4vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#020617] dark:text-white">
+                  by Government of India
+                </h2>
+              </div>
+
+              <p className="relative mt-6 max-w-3xl text-sm leading-8 text-slate-600 dark:text-white/65 sm:text-base">
+                TechNova Solutions is officially registered under the Udyam MSME
+                initiative, reflecting our commitment to transparency,
+                professionalism, trusted internship programs, and modern digital
+                solutions.
+              </p>
+
+              <div className="relative mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                {trustItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex min-h-[78px] items-center gap-3 rounded-2xl border border-cyan-100 bg-white/80 p-4 shadow-lg shadow-slate-900/5 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#007f8f]/40 dark:border-white/10 dark:bg-white/5"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#007f8f] text-white">
+                      <CheckCircle2 size={16} />
+                    </div>
+
+                    <p className="text-sm font-bold leading-snug text-slate-800 dark:text-white">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT */}
+            <div className="relative min-h-[340px] overflow-hidden bg-gradient-to-br from-[#ffe24d] via-[#ffd814] to-[#ffc400] p-7 lg:min-h-0 lg:p-8">
+              <div className="absolute right-[-40px] top-[-40px] h-64 w-64 rounded-full bg-white/20 blur-3xl" />
+
+              {/* CURVE */}
+              <div className="absolute -left-24 top-0 hidden h-full w-[190px] rounded-r-full border-r-[8px] border-[#007f8f] bg-[#f8f4df] lg:block" />
+
+              {/* FIXED OVERLAP */}
+              <div className="relative z-10 mx-auto flex h-full max-w-[270px] flex-col items-center justify-center text-center lg:ml-auto lg:mr-0">
+                {" "}
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-white/30 blur-2xl" />
+
+                  <div className="relative flex h-36 w-36 items-center justify-center rounded-full border-[8px] border-yellow-100 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                    <CheckCircle2 size={58} className="text-[#007f8f]" />
+                  </div>
+                </div>
+                <h3 className="mt-7 text-center text-[1.7rem] font-black leading-tight tracking-[-0.03em] text-[#020617] sm:text-3xl">
+                  Verified Business
+                </h3>
+                <p className="mt-3 whitespace-nowrap text-[10px] font-black uppercase tracking-[0.22em] text-slate-800/80 sm:text-xs">
+                  Government Recognized
+                </p>
+                <div className="mt-5 flex items-center justify-center gap-3">
+                  <div className="h-[2px] w-12 bg-slate-900/30" />
+
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#007f8f] text-white shadow-lg">
+                    <ShieldCheck size={15} />
+                  </div>
+
+                  <div className="h-[2px] w-12 bg-slate-900/30" />
+                </div>
+                <div className="mt-6 whitespace-nowrap rounded-full bg-[#007f8f] px-6 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white shadow-2xl shadow-cyan-900/30 sm:text-xs">
+                  Government Recognized
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* PROCESS */}
+        <div className="mt-20">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#007f8f]">
+              Internship Process
             </p>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {benefits.map((item) => (
-                <div
-                  key={item}
-                  className="flex min-w-0 items-center gap-3 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-bold text-slate-700 shadow-sm dark:border-white/10 dark:bg-[#131921] dark:text-white/75"
-                >
-                  <CheckCircle2 className="h-5 w-5 text-[#007185] dark:text-[#ffd814]" />
-                  {item}
-                </div>
-              ))}
-            </div>
+            <h3 className="mt-4 text-[clamp(2rem,5vw,3.5rem)] font-serif font-black leading-tight tracking-tight">
+              Simple, transparent & beginner-friendly
+            </h3>
+          </div>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a
-                href={applyLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#ffd814] px-6 py-4 text-sm font-bold text-[#111827] shadow-sm transition hover:bg-[#f7ca00] sm:w-auto sm:px-8"
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {process.map((item, index) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                whileHover={{ y: -5 }}
+                className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/5 transition hover:border-[#007f8f]/40 dark:border-white/10 dark:bg-[#111827]"
               >
-                Apply Now
-                <ArrowRight size={18} />
-              </a>
-
-              <a
-                href="#internship-domains"
-                className="inline-flex w-full items-center justify-center gap-3 rounded-xl border border-slate-300 bg-white px-6 py-4 text-sm font-bold text-slate-800 shadow-sm transition hover:border-[#007185] dark:border-white/10 dark:bg-[#131921] dark:text-white sm:w-auto sm:px-8"
-              >
-                View Domains
-              </a>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: 0.1 }}
-            className="w-full max-w-full overflow-hidden rounded-2xl bg-[#131921] p-6 text-white shadow-lg sm:p-10"
-          >
-            <div className="flex items-start justify-between gap-5">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#ffd814]">
-                  Learn. Build. Grow.
-                </span>
-
-                <h3 className="mt-5 text-2xl font-black leading-tight sm:text-4xl">
-                  Practical internship for future-ready talent.
-                </h3>
-              </div>
-
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#232f3e] text-white">
-                <GraduationCap size={34} />
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {programDetails.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-xl border border-white/10 bg-[#232f3e] p-5"
-                >
-                  <p className="text-sm text-slate-300">{item.label}</p>
-                  <p className="mt-2 text-xl font-black">{item.value}</p>
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#007f8f] text-lg font-black text-white">
+                  {item.step}
                 </div>
-              ))}
-            </div>
-          </motion.div>
+
+                <h4 className="text-2xl font-black tracking-tight">
+                  {item.title}
+                </h4>
+
+                <p className="mt-4 text-sm leading-8 text-slate-600 dark:text-white/65">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* DOMAINS */}
-        <div id="internship-domains" className="mt-16 sm:mt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#007185] dark:text-[#ffd814] sm:text-sm sm:tracking-[0.25em]">
-              Choose Your Domain
-            </span>
-
-            <h2 className="mt-5 text-[clamp(2rem,8vw,2.5rem)] font-black leading-tight sm:text-5xl">
-              Internship programs built for practical growth.
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-600 dark:text-white/65">
-              Select your area of interest and complete guided assignments,
-              mini-projects, and portfolio-ready tasks that help you explain
-              your skills confidently.
+        <div className="mt-20">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#007f8f]">
+              Internship Domains
             </p>
-          </motion.div>
 
-          <div className="mt-10 grid w-full gap-6 md:mt-12 md:grid-cols-2 xl:grid-cols-3">
-            {internships.map((item, index) => {
+            <h3 className="mt-4 text-[clamp(2rem,5vw,3.5rem)] font-black leading-tight tracking-tight">
+              Choose Your Learning Path
+            </h3>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {domains.map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <motion.div
+                <motion.article
                   key={item.title}
                   initial={{ opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.45, delay: index * 0.05 }}
-                  whileHover={{ y: -5 }}
-                  className="group flex h-full w-full max-w-full flex-col overflow-hidden rounded-2xl border border-slate-300 bg-white p-5 shadow-sm transition hover:border-[#007185] hover:shadow-md dark:border-white/10 dark:bg-[#131921] sm:p-6"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.06 }}
+                  whileHover={{ y: -6 }}
+                  className="group relative flex min-h-[340px] flex-col justify-between rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl shadow-slate-900/5 transition hover:border-[#007f8f]/40 dark:border-white/10 dark:bg-[#111827]"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#232f3e] text-white transition group-hover:scale-105">
-                    <Icon size={27} strokeWidth={2.2} />
+                  <div>
+                    <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[#111827] text-white transition group-hover:scale-105">
+                      <Icon size={32} />
+                    </div>
+
+                    <h4 className="mt-7 text-2xl font-black leading-tight tracking-tight">
+                      {item.title}
+                    </h4>
+
+                    <p className="mt-5 text-[15px] leading-8 text-slate-600 dark:text-white/65">
+                      {item.desc}
+                    </p>
                   </div>
-
-                  <h3 className="mt-7 text-2xl font-black text-slate-950 dark:text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 flex-1 text-sm leading-7 text-slate-600 dark:text-white/60">
-                    {item.desc}
-                  </p>
 
                   <a
                     href={applyLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#ffd814] px-5 py-3 text-sm font-bold text-[#111827] shadow-sm transition hover:bg-[#f7ca00] sm:w-auto"
+                    className="mt-8 inline-flex items-center justify-center gap-3 rounded-2xl bg-[#ffd814] px-7 py-4 text-base font-black text-black shadow-lg shadow-yellow-400/25 transition hover:-translate-y-1 hover:bg-[#f7ca00]"
                   >
                     Apply Now
-                    <ArrowRight size={17} />
+                    <ArrowRight size={20} />
                   </a>
-                </motion.div>
+                </motion.article>
               );
             })}
           </div>
         </div>
-
-        {/* BOTTOM CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55 }}
-          className="mt-14 grid w-full max-w-full items-center gap-6 overflow-hidden rounded-2xl bg-[#131921] p-6 text-white shadow-lg sm:mt-16 sm:p-10 md:grid-cols-[auto_1fr_auto]"
-        >
-          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-[#232f3e] text-white">
-            <BriefcaseBusiness size={32} />
-          </div>
-
-          <div>
-            <div className="mb-2 flex items-center gap-2 text-[#ffd814]">
-              <Star size={17} />
-              <span className="text-xs font-bold uppercase tracking-[0.18em] sm:tracking-[0.25em]">
-                Career Growth
-              </span>
-            </div>
-
-            <h3 className="text-2xl font-black sm:text-3xl">
-              Not sure which internship is right for you?
-            </h3>
-
-            <p className="mt-3 max-w-2xl text-slate-300">
-              Apply now and our team will help you choose the best domain based
-              on your interest, current skill level, and career goal.
-            </p>
-          </div>
-
-          <a
-            href={applyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#ffd814] px-6 py-4 text-sm font-bold text-[#111827] shadow-sm transition hover:bg-[#f7ca00] md:w-auto md:px-8"
-          >
-            Apply Now
-            <ArrowRight size={18} />
-          </a>
-        </motion.div>
       </div>
     </section>
   );

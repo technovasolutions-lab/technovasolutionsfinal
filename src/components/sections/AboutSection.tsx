@@ -62,6 +62,13 @@ const growthCards = [
   },
 ];
 
+const trustItems = [
+  "Transparent & Honest",
+  "Quality-Focused",
+  "Client-Centric",
+  "Certified Team",
+];
+
 export default function AboutSection() {
   return (
     <section
@@ -149,6 +156,115 @@ export default function AboutSection() {
             </div>
           </motion.div>
         </div>
+        {/* TRUST BANNER */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative mt-12 overflow-hidden rounded-[2rem] border border-cyan-100 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-[#0f1722]"
+        >
+          <div className="absolute left-[-120px] top-[20%] h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="absolute right-[-120px] top-0 h-72 w-72 rounded-full bg-yellow-400/20 blur-3xl" />
+
+          <div className="grid lg:grid-cols-[1fr_390px] xl:grid-cols-[1fr_420px]">
+            {/* LEFT */}
+            <div className="relative overflow-hidden p-6 sm:p-8 lg:p-10 xl:p-12">
+              <div className="absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-cyan-50 to-transparent dark:from-cyan-500/5" />
+
+              <div className="relative flex items-center gap-4">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#007f8f] to-cyan-700 text-white shadow-xl shadow-cyan-500/30">
+                  <ShieldCheck size={30} />
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#007f8f] sm:text-xs">
+                    Trust & Authenticity
+                  </p>
+
+                  <div className="mt-2 h-[3px] w-20 rounded-full bg-gradient-to-r from-[#007f8f] to-transparent" />
+                </div>
+              </div>
+
+              <div className="relative mt-8 max-w-4xl text-center lg:text-left">
+                <h2 className="font-serif text-[clamp(2rem,4vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#020617] dark:text-white">
+                  Officially Recognized <span className="inline-block">&</span>
+                </h2>
+
+                <h2 className="mt-1 font-serif text-[clamp(2rem,4vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em]">
+                  <span className="bg-gradient-to-r from-[#007f8f] via-cyan-500 to-sky-500 bg-clip-text text-transparent">
+                    Udyam Registered
+                  </span>
+                </h2>
+
+                <h2 className="mt-1 font-serif text-[clamp(2rem,4vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#020617] dark:text-white">
+                  by Government of India
+                </h2>
+              </div>
+
+              <p className="relative mt-6 max-w-3xl text-sm leading-8 text-slate-600 dark:text-white/65 sm:text-base">
+                TechNova Solutions is officially registered under the Udyam MSME
+                initiative, reflecting our commitment to transparency,
+                professionalism, trusted internship programs, and modern digital
+                solutions.
+              </p>
+
+              <div className="relative mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                {trustItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex min-h-[78px] items-center gap-3 rounded-2xl border border-cyan-100 bg-white/80 p-4 shadow-lg shadow-slate-900/5 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#007f8f]/40 dark:border-white/10 dark:bg-white/5"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#007f8f] text-white">
+                      <CheckCircle2 size={16} />
+                    </div>
+
+                    <p className="text-sm font-bold leading-snug text-slate-800 dark:text-white">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT */}
+            <div className="relative min-h-[340px] overflow-hidden bg-gradient-to-br from-[#ffe24d] via-[#ffd814] to-[#ffc400] p-7 lg:min-h-0 lg:p-8">
+              <div className="absolute right-[-40px] top-[-40px] h-64 w-64 rounded-full bg-white/20 blur-3xl" />
+
+              {/* CURVE */}
+              <div className="absolute -left-24 top-0 hidden h-full w-[190px] rounded-r-full border-r-[8px] border-[#007f8f] bg-[#f8f4df] lg:block" />
+
+              {/* FIXED OVERLAP */}
+              <div className="relative z-10 mx-auto flex h-full max-w-[270px] flex-col items-center justify-center text-center lg:ml-auto lg:mr-0">
+                {" "}
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-white/30 blur-2xl" />
+
+                  <div className="relative flex h-36 w-36 items-center justify-center rounded-full border-[8px] border-yellow-100 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                    <CheckCircle2 size={58} className="text-[#007f8f]" />
+                  </div>
+                </div>
+                <h3 className="mt-7 text-center text-[1.7rem] font-black leading-tight tracking-[-0.03em] text-[#020617] sm:text-3xl">
+                  Verified Business
+                </h3>
+                <p className="mt-3 whitespace-nowrap text-[10px] font-black uppercase tracking-[0.22em] text-slate-800/80 sm:text-xs">
+                  Government Recognized
+                </p>
+                <div className="mt-5 flex items-center justify-center gap-3">
+                  <div className="h-[2px] w-12 bg-slate-900/30" />
+
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#007f8f] text-white shadow-lg">
+                    <ShieldCheck size={15} />
+                  </div>
+
+                  <div className="h-[2px] w-12 bg-slate-900/30" />
+                </div>
+                <div className="mt-6 whitespace-nowrap rounded-full bg-[#007f8f] px-6 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white shadow-2xl shadow-cyan-900/30 sm:text-xs">
+                  Government Recognized
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* PILLARS */}
         <div className="mt-16 sm:mt-20">
