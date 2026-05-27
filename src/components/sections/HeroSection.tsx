@@ -146,7 +146,7 @@ export default function HeroSection() {
                 </span>
               </motion.h1>
 
-              <p className="mx-auto mt-7 max-w-2xl font-['Poppins'] text-base leading-8 text-white/75 sm:text-lg lg:mx-0">
+              <p className="mx-auto mt-7 max-w-2xl font-['Playfair_Display'] text-base leading-8 text-white/75 sm:text-lg lg:mx-0">
                 We build AI-powered digital products, modern web experiences,
                 and future-ready software solutions that drive real business
                 results.
@@ -155,7 +155,7 @@ export default function HeroSection() {
               <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
                 <Link
                   to="/services"
-                  className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 font-['Poppins'] text-sm font-bold text-white shadow-[0_15px_50px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-[1.03]"
+                  className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 font-['Playfair_Display'] text-sm font-bold text-white shadow-[0_15px_50px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-[1.03]"
                 >
                   Explore Services
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -163,7 +163,7 @@ export default function HeroSection() {
 
                 <Link
                   to="/internship"
-                  className="group inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-['Poppins'] text-sm font-bold text-white backdrop-blur-xl transition-all duration-300 hover:border-violet-400/40 hover:bg-white/10"
+                  className="group inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-['Playfair_Display'] text-sm font-bold text-white backdrop-blur-xl transition-all duration-300 hover:border-violet-400/40 hover:bg-white/10"
                 >
                   Apply for Internship
                   <Users className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
