@@ -128,23 +128,20 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 35, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.15, duration: 0.8, ease: "easeOut" }}
-                className="hero-heading-font mx-auto max-w-3xl text-[clamp(3rem,8vw,6.2rem)] leading-[0.88] tracking-[-0.07em] text-white antialiased lg:mx-0"
-                style={{
-                  WebkitFontSmoothing: "antialiased",
-                  MozOsxFontSmoothing: "grayscale",
-                  textRendering: "geometricPrecision",
-                }}
+                className="mx-auto max-w-3xl font-['Poppins'] text-[clamp(2.4rem,7vw,4.2rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-white antialiased lg:mx-0"
               >
                 Building
                 <br />
                 Intelligent
                 <br />
-                Solutions for
+                Solutions for the
                 <br />
-                the Future
+                <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+                  Future
+                </span>
               </motion.h1>
 
-              <p className="mx-auto mt-7 max-w-2xl font-['Playfair_Display'] text-base leading-8 text-white/75 sm:text-lg lg:mx-0">
+              <p className="mx-auto mt-7 max-w-2xl font-['Poppins'] text-base leading-8 text-white/75 sm:text-lg lg:mx-0">
                 We build AI-powered digital products, modern web experiences,
                 and future-ready software solutions that drive real business
                 results.
@@ -153,7 +150,7 @@ export default function HeroSection() {
               <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
                 <Link
                   to="/services"
-                  className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 font-['Playfair_Display'] text-sm font-bold text-white shadow-[0_15px_50px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-[1.03]"
+                  className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 font-['Poppins'] text-sm font-bold text-white shadow-[0_15px_50px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-[1.03]"
                 >
                   Explore Services
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -161,7 +158,7 @@ export default function HeroSection() {
 
                 <Link
                   to="/internship"
-                  className="group inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-['Playfair_Display'] text-sm font-bold text-white backdrop-blur-xl transition-all duration-300 hover:border-violet-400/40 hover:bg-white/10"
+                  className="group inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-['Poppins'] text-sm font-bold text-white backdrop-blur-xl transition-all duration-300 hover:border-violet-400/40 hover:bg-white/10"
                 >
                   Apply for Internship
                   <Users className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
