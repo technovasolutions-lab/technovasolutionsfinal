@@ -111,30 +111,28 @@ function LeadershipCard({ member, index }: { member: Member; index: number }) {
             {member.name}
           </h3>
 
-          <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-zinc-300">
+          <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-zinc-300">
             {member.desc}
           </p>
 
-          <div className="mt-6 flex items-center gap-4">
-            {member.email && (
-              <a
-                href={`mailto:${member.email}`}
-                aria-label={`Mail ${member.name}`}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#007c89] text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-110"
-              >
-                <Mail size={20} />
-              </a>
-            )}
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={`mailto:${member.email || "support.technovasolutions@gmail.com"}`}
+              aria-label={`Email ${member.name}`}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#007c89] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#006a75]"
+            >
+              <Mail size={18} />
+            </a>
 
             {member.portfolio && (
               <a
                 href={member.portfolio}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View ${member.name} portfolio`}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#111827] text-white shadow-lg shadow-slate-500/25 transition-all duration-300 hover:scale-110 dark:bg-white dark:text-[#111827]"
+                aria-label={`${member.name} Portfolio`}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#007c89] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#006a75]"
               >
-                <Globe size={20} />
+                <Globe size={18} />
               </a>
             )}
           </div>
@@ -160,7 +158,7 @@ function CoreTeamCard({ member, index }: { member: Member; index: number }) {
         />
       </div>
 
-      <div className="p-6">
+      <div className="flex min-h-[260px] flex-col p-6">
         <h3 className="font-serif text-2xl font-semibold tracking-wide text-slate-900 dark:text-white">
           {member.name}
         </h3>
@@ -168,17 +166,28 @@ function CoreTeamCard({ member, index }: { member: Member; index: number }) {
         <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-zinc-300">
           {member.desc}
         </p>
-        {member.portfolio && (
+
+        <div className="mt-auto flex items-center gap-3 pt-5">
           <a
-            href={member.portfolio}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${member.name} Portfolio`}
-            className="mt-5 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#007c89] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#006a75]"
+            href={`mailto:${member.email || "support.technovasolutions@gmail.com"}`}
+            aria-label={`Email ${member.name}`}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#007c89] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#006a75]"
           >
-            <Globe size={18} />
+            <Mail size={18} />
           </a>
-        )}
+
+          {member.portfolio && (
+            <a
+              href={member.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} Portfolio`}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#007c89] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#006a75]"
+            >
+              <Globe size={18} />
+            </a>
+          )}
+        </div>
       </div>
     </motion.article>
   );
