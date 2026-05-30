@@ -11,6 +11,13 @@ const quickLinks = [
   { label: "Contact", to: "/contact" },
 ];
 
+const policies = [
+  { label: "Terms & Conditions", to: "/terms-and-conditions" },
+  { label: "Privacy Policy", to: "/privacy-policy" },
+  { label: "Security Policy", to: "/security-policy" },
+  { label: "Client & Payment Policy", to: "/client-payment-policy" },
+];
+
 const services = [
   "Web Development",
   "AI Solutions",
@@ -41,7 +48,7 @@ export default function Footer() {
       <div className="absolute -right-24 bottom-0 h-44 w-44 rounded-full bg-cyan-100/60 blur-3xl dark:bg-cyan-500/10" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
-        <div className="grid w-full gap-7 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.7fr_0.8fr_0.95fr]">
+        <div className="grid w-full gap-7 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.7fr_0.8fr_0.75fr_0.95fr]">
           {/* BRAND */}
           <div className="text-center sm:col-span-2 lg:col-span-1 lg:text-left">
             <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center lg:justify-start">
@@ -106,7 +113,21 @@ export default function Footer() {
               </ul>
             </FooterColumn>
           </div>
-
+          <FooterColumn title="Policies">
+            <ul className="space-y-2 text-center lg:text-left">
+              {policies.map((policy) => (
+                <li key={policy.label}>
+                  <button
+                    type="button"
+                    onClick={() => handleNavigate(policy.to)}
+                    className="relative text-sm font-medium text-slate-600 transition-all duration-300 hover:text-blue-600 dark:text-white/65 dark:hover:text-cyan-300 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-400 after:to-blue-500 after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {policy.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </FooterColumn>
           {/* CONTACT */}
           <FooterColumn title="Contact">
             <div className="space-y-2">

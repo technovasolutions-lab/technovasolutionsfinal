@@ -12,7 +12,9 @@ import InternshipSection from "./components/sections/InternshipSection";
 import PortfolioSection from "./components/sections/PortfolioSection";
 import TeamSection from "./components/sections/TeamSection";
 import ScrollToTop from "./components/ScrollToTop";
+import PolicyPage from "./components/sections/PolicyPage";
 import InternshipApplySection from "./components/sections/InternshipApplySection";
+
 export default function App() {
   const [dark, setDark] = useState(() =>
     document.documentElement.classList.contains("dark"),
@@ -47,6 +49,22 @@ export default function App() {
             path="/internship-apply"
             element={<InternshipApplySection />}
           />{" "}
+          <Route
+            path="/terms-and-conditions"
+            element={<PolicyPage type="terms-and-conditions" />}
+          />
+          <Route
+            path="/privacy-policy"
+            element={<PolicyPage type="privacy-policy" />}
+          />
+          <Route
+            path="/security-policy"
+            element={<PolicyPage type="security-policy" />}
+          />
+          <Route
+            path="/client-payment-policy"
+            element={<PolicyPage type="client-payment-policy" />}
+          />
         </Routes>
       </main>
 

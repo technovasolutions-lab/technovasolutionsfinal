@@ -11,7 +11,7 @@ import {
   Users,
 } from "lucide-react";
 
-const STARTUP_INDIA_LOGO = "/startup-india.png";
+const STARTUP_INDIA_LOGO = "/startup-india-transparent.png";
 const STARTUP_TEMP_ID = "IN-0426-9440WO";
 
 const growthCards = [
