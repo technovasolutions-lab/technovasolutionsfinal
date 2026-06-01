@@ -96,7 +96,7 @@ const domains = [
 ];
 
 const trustItems = [
-  "MSME Registered",
+  " #startupindia Registered",
   "Verified Business",
   "Trusted Internship Provider",
   "Professional Digital Solutions",

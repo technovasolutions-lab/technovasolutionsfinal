@@ -22,9 +22,9 @@ type Member = {
 const imageStyles: Record<string, string> = {
   "Tanis Patel": "scale-[1.35] translate-y-8",
   "Sweeny Rajput": "scale-[1.08]",
-  "Pallavi Ramoliya": "scale-[1.08]",
-  "Krisha Patel": "scale-[1.08]",
-  "Manav Rabadiya": "scale-[1.12]",
+  "Pallavi Ramoliya": "scale-[1.08] -translate-y-9",
+  "Krisha Patel": "scale-[1.02] -translate-y-21",
+  "Manav Rabadiya": "scale-[1.12] ",
   "Kush Patel": "scale-[1.08]",
 };
 
@@ -57,7 +57,7 @@ const coreTeam: Member[] = [
   },
   {
     name: "Pallavi Ramoliya",
-    image: "pallavi-ramoliya.jpg",
+    image: "pallavi-ramoliya.jpeg",
     desc: "Contributing to organizational growth through collaboration, responsibility, and a results-driven mindset.",
     email: "support.technovasolutions@gmail.com",
   },
@@ -250,7 +250,8 @@ export default function TeamSection() {
               </h2>
             </div>
 
-            <div className="grid w-full gap-6 lg:grid-cols-2">
+            <div className="grid w-full gap-5 sm:grid-cols-2 lg:grid-cols-2">
+              {" "}
               {leadershipTeam.map((member, index) => (
                 <LeadershipCard
                   key={member.name}
