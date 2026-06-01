@@ -201,13 +201,15 @@ export default function AboutSection() {
                 return (
                   <div
                     key={item.title}
-                    className="flex flex-col justify-start rounded-2xl bg-[#f8fbfb] p-5 pt-7 dark:bg-white/5"
+                    className="flex flex-col items-center text-center rounded-2xl bg-[#f8fbfb] p-5 pt-7 dark:bg-white/5"
                   >
                     <Icon className="h-14 w-14 text-[#007f8f]" />
 
-                    <h4 className="mt-5 font-black">{item.title}</h4>
+                    <h4 className="mt-5 font-black text-center">
+                      {item.title}
+                    </h4>
 
-                    <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-white/60">
+                    <p className="mt-3 text-center text-sm leading-7 text-slate-600 dark:text-white/60">
                       {item.text}
                     </p>
                   </div>
