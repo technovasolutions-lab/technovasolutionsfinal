@@ -108,7 +108,7 @@ export default function PortfolioSection() {
             </div>
 
             <a
-              href={`${import.meta.env.BASE_URL}contact`}
+              href={`${import.meta.env.BASE_URL}#/contact`}
               className="group inline-flex w-full items-center justify-center gap-4 rounded-2xl bg-[#007185] px-7 py-4 text-sm font-black text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#005f70] dark:bg-[#ffd814] dark:text-[#111827] dark:hover:bg-[#f7ca00] sm:w-auto"
             >
               Contact Us

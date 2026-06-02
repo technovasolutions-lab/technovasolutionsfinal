@@ -304,7 +304,7 @@ export default function TeamSection() {
             </div>
 
             <a
-              href="/contact"
+              href={`${import.meta.env.BASE_URL}#/contact`}
               className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#ffd213] px-6 py-4 text-sm font-black text-black shadow-lg shadow-yellow-300/40 transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffdd35] active:scale-95 sm:w-auto sm:px-8"
             >
               Contact Us
