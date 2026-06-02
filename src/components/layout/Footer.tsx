@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="text-center sm:col-span-2 lg:col-span-1 lg:text-left">
             <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center lg:justify-start">
               <img
-                src="/logo.jpeg"
+                src={`${import.meta.env.BASE_URL}logo.jpeg`}
                 alt="TechNova Solutions"
                 className="h-12 w-12 rounded-full border border-slate-200 bg-white object-cover shadow-md dark:border-white/10"
               />

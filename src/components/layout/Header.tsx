@@ -20,8 +20,7 @@ type Props = {
   setDark: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const logo = "/logo.jpeg";
-
+const logo = `${import.meta.env.BASE_URL}logo.jpeg`;
 const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "About Us", href: "/about", icon: Info },
