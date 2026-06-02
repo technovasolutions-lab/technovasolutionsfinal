@@ -177,8 +177,8 @@ export default function PolicyPage({ type }: { type: keyof typeof policies }) {
         className="relative z-10 mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-slate-200 bg-white/85 p-5 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.05] sm:p-8 lg:p-10"
       >
         <img
-          src="/logo.jpeg"
-          alt=""
+          src={`${import.meta.env.BASE_URL}logo.jpeg`}
+          alt="logo"
           className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[700px] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.18] select-none dark:opacity-[0.20]"
         />
 
@@ -229,7 +229,7 @@ export default function PolicyPage({ type }: { type: keyof typeof policies }) {
         <div className="mt-10 rounded-3xl border border-[#007c89]/20 bg-gradient-to-r from-cyan-50 to-white p-6 dark:border-cyan-400/20 dark:from-cyan-950/20 dark:to-transparent">
           <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
             <img
-              src="/startup-india-transparent.png"
+              src={`${import.meta.env.BASE_URL}startup-india-transparent.png`}
               alt="Startup India"
               className="h-16 w-auto object-contain sm:h-20"
             />

@@ -174,7 +174,7 @@ export default function InternshipSection() {
               <div className="relative mt-8 max-w-5xl">
                 <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
                   <img
-                    src="/startup-india-transparent.png"
+                    src={`${import.meta.env.BASE_URL}startup-india-transparent.png`}
                     alt="Startup India"
                     className="w-[260px] h-auto object-contain"
                   />
@@ -526,7 +526,7 @@ export default function InternshipSection() {
               <div className="rounded-[2rem] bg-gradient-to-r from-[#007f8f] via-cyan-500 to-blue-600 p-[3px] shadow-[0_25px_70px_rgba(8,145,178,0.25)]">
                 <div className="rounded-[1.8rem] bg-white p-3 dark:bg-[#07111f]">
                   <img
-                    src="/certificate-demo.png"
+                    src={`${import.meta.env.BASE_URL}certificate-demo.png`}
                     alt="Certificate Preview"
                     className="w-full rounded-[1.4rem] object-cover shadow-2xl"
                   />

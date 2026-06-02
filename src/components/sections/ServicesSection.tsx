@@ -186,7 +186,7 @@ export default function ServicesSection() {
             <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:text-left">
               <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-2xl sm:h-28 sm:w-28">
                 <img
-                  src="/logo.jpeg"
+                  src={`${import.meta.env.BASE_URL}logo.jpeg`}
                   alt="TechNova Solutions"
                   className="h-16 w-16 rounded-full object-cover sm:h-20 sm:w-20"
                 />

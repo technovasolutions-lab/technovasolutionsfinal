@@ -108,7 +108,7 @@ export default function PortfolioSection() {
             </div>
 
             <a
-              href="/contact"
+              href={`${import.meta.env.BASE_URL}contact`}
               className="group inline-flex w-full items-center justify-center gap-4 rounded-2xl bg-[#007185] px-7 py-4 text-sm font-black text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#005f70] dark:bg-[#ffd814] dark:text-[#111827] dark:hover:bg-[#f7ca00] sm:w-auto"
             >
               Contact Us
@@ -151,7 +151,7 @@ function ProjectCard({
     >
       <div className="relative h-52.5 overflow-hidden rounded-t-[26px] bg-[#e9eef2] dark:bg-[#0f1720] sm:h-60 lg:h-55 xl:h-60">
         <img
-          src={project.image}
+          src={`${import.meta.env.BASE_URL}${project.image}`}
           alt={project.title}
           className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]"
         />

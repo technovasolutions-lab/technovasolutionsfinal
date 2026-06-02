@@ -96,7 +96,7 @@ function LeadershipCard({ member, index }: { member: Member; index: number }) {
       <div className="grid h-full md:grid-cols-[42%_58%]">
         <div className="relative h-[360px] overflow-hidden bg-[#e9edf2] sm:h-[420px] md:h-full">
           <img
-            src={member.image}
+            src={`${import.meta.env.BASE_URL}${member.image}`}
             alt={member.name}
             className={`absolute inset-0 h-full w-full object-cover object-top transition duration-700 group-hover:scale-105 ${
               imageStyles[member.name] || ""
@@ -163,7 +163,7 @@ function CoreTeamCard({ member, index }: { member: Member; index: number }) {
     >
       <div className="relative h-[320px] overflow-hidden bg-[#e9edf2] sm:h-[360px]">
         <img
-          src={member.image}
+          src={`${import.meta.env.BASE_URL}${member.image}`}
           alt={member.name}
           className={`absolute inset-0 h-full w-full object-cover object-top transition duration-700 group-hover:scale-105 ${
             imageStyles[member.name] || ""
